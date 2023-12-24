@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acting</title>
+    <style>
+      body {
+        background: linear-gradient(
+          82deg,
+          rgb(252, 126, 115) 0%,
+          rgb(117, 38, 6) 100%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgb(117, 38, 6);
+        background: white;
+        font-size: 15px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 128ms ease-in-out;
+      }
+      button:hover {
+        background: rgb(117, 38, 6);
+        color: white;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        font-size: 16px;
+        margin: 20px 0;
+      }
+      .content {
+        max-width: 600px;
+        background-color: bisque;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      .changeTheme {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding: 10px 10px;
+      }
+      .changeTheme:hover {
+        color: black;
+        background: white;
+      }
+      .dramaMask {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .dramaMask:hover {
+        filter: contrast(50%);
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      .dramaCurtains {
+        border-radius: 10px;
+        max-width: 100%;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin: 5px 0;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(1.3);
+      }
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(6, 2, 2) 32.4%,
+          rgb(137, 30, 47) 98.8%
+        );
+        color: white;
+      }
+      .dark .content {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: aliceblue;
+      }
+      .acting {
+        color: rgb(117, 38, 6);
+      }
+
+      .Difference-Acting-Screen {
+        text-decoration: none;
+      }
+      .links {
+        color: #420001;
+      }
+      .links a {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="changeTheme">Change theme</button>
+    <div class="content">
+      <h1>Acting</h1>
+      <h2>My favorite hobby</h2>
+      <a href="https://en.wikipedia.org/wiki/Acting" target="_blank">
+        <img
+          src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/168/original/acting-1.jpg?1697620069"
+          alt=""
+          class="dramaMask"
+        />
+      </a>
+      <br />
+      <div class="grid">
+        <img
+          src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/171/original/acting_3.jpg?1697620124"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/363/original/camera.jpg?1697799623"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/169/original/acting-2.jpg?1697620088"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/371/original/skjermbilde1.jpg?1697802709"
+          alt=""
+        />
+      </div>
+      <p>
+        Acting is an activity in which a story is told by means of its enactment
+        by an actor who adopts a character—in theatre, television, film, radio,
+        or any other medium that makes use of the mimetic mode. Acting involves
+        a broad range of skills, including a well-developed imagination,
+        emotional facility, physical expressivity, vocal projection, clarity of
+        speech, and the ability to interpret drama. Acting also demands an
+        ability to employ dialects, accents, improvisation, observation and
+        emulation, mime, and stage combat.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Acting"
+          target="_blank"
+          class="acting"
+        >
+          <strong> Read more on Wikipedia </strong>
+        </a>
+      </p>
+      <br />
+      <a
+        href="https://paacolorado.org/acting-for-the-screen-vs-the-stage/"
+        target="_blank"
+        class="Difference-Acting-Screen"
+      >
+        <button>Read more here: Screen vs. Stage 🎭</button>
+      </a>
+    </div>
+
+    <footer class="links">
+      This project was coded by
+      <a href="https://github.com/OzgeBagci" target="_blank">Øzge Bagci</a>
+      and is
+      <a
+        href="https://github.com/OzgeBagci/my-favorite-hobby-project"
+        target="_blank"
+      >
+        open-sourced on GitHub</a
+      >
+      and
+      <a href="https://my-favorite-hobby-project.netlify.app/" target="_blank"
+        >hosted on Netlify</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let changeButton = document.querySelector(".changeTheme");
+      changeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
